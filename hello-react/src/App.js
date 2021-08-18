@@ -1,7 +1,7 @@
 import React from 'react';
 
 const App = () => {
-  const name = '리액트';
+  const name = '리웩트';
   return (
     <>
       <h1>잘 작동하니</h1>
