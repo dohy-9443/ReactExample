@@ -4,8 +4,13 @@ const Info = () => {
   const [name, setName] = useState("");
   const [nickname, setNickname] = useState("");
   useEffect(() => {
-    console.log("특정 값이 업데이트될 때만 실행됩니다.");
+    console.log("뒷정리하기");
+    console.log("effect");
     console.log(name);
+    return () => {
+      console.log("cleanup");
+      console.log(name);
+    };
   }, [name]);
 
   const onChangeName = (e) => {
