@@ -16,10 +16,12 @@ const Say = () => {
         textAlign: 'center',
       }}
     >
-      <h1 style={{ color }}>{message}</h1>
+      <h1 style={{ color }}>{message || '안녕?'}</h1>
       <button onClick={onClickEnter}>입장</button>
       <button onClick={onClickLeave}>입장</button>
+
       <div>
+        <br />
         <button
           style={{ color: '#BAE7AF' }}
           onClick={() => setColor('#BAE7AF')}
