@@ -1,20 +1,9 @@
 import React from "react";
+import "./App.css";
 
 const App = () => {
   const name = "react";
-  return (
-    <div
-      style={{
-        backgroundColor: "black",
-        color: "aqua",
-        fontSize: "48px",
-        fontWeight: "bold",
-        padding: 16,
-      }}
-    >
-      {name}
-    </div>
-  );
+  return <div className="react">{name}</div>;
 };
 
 export default App;
