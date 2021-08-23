@@ -1,19 +1,26 @@
 import React, { Component } from 'react';
 
 class EventPractice extends Component {
-  state = { message: '' };
+  state = { username: '', message: '' };
 
   handleChange = (e) => {
     this.setState({
-      message: e.target.value,
+      [e.target.name]: e.target.value,
     });
   };
 
   handleClick = () => {
-    alert(this.state.message);
+    alert(this.state.username + ': ' + this.state.message);
     this.setState({
+      username: '',
       message: '',
     });
+  };
+
+  handleKeyPress = (e) => {
+    if (e.key === 'Enter') {
+      this.handleClick();
+    }
   };
 
   render() {
@@ -28,10 +35,24 @@ class EventPractice extends Component {
       >
         <h1 style={{ color: 'white' }}>이벤트 연습</h1>
         <h1 style={{ color: 'white' }}>
-          {this.state.message || '내용을 입력해보세요.'}
+          {this.state.username + ': ' + this.state.message}
         </h1>
-
         <br />
+        <input
+          style={{
+            padding: '1rem',
+            background: '#83a7a3',
+            color: '#BEEBFD',
+            fontSize: '20px',
+            fontWeight: 'bold',
+          }}
+          type="text"
+          name="username"
+          placeholder="사용자명을 입력하세요."
+          value={this.state.username}
+          onChange={this.handleChange}
+        />
+        &nbsp;&nbsp;
         <input
           style={{
             padding: '1rem',
@@ -45,6 +66,7 @@ class EventPractice extends Component {
           placeholder="아무거나 입력해 보세요."
           value={this.state.message}
           onChange={this.handleChange}
+          onKeyPress={this.handleKeyPress}
         />
         <br />
         <br />
