@@ -5,6 +5,8 @@ const Say = () => {
   const onClickEnter = () => setMessage('안녕하세요!');
   const onClickLeave = () => setMessage('안녕히 가세요!');
 
+  const [color, setColor] = useState('white');
+
   return (
     <div
       style={{
@@ -14,15 +16,29 @@ const Say = () => {
         textAlign: 'center',
       }}
     >
-      <h1
-        style={{
-          color: 'white',
-        }}
-      >
-        {message}
-      </h1>
+      <h1 style={{ color }}>{message}</h1>
       <button onClick={onClickEnter}>입장</button>
       <button onClick={onClickLeave}>입장</button>
+      <div>
+        <button
+          style={{ color: '#BAE7AF' }}
+          onClick={() => setColor('#BAE7AF')}
+        >
+          초록색
+        </button>
+        <button
+          style={{ color: '#CFC3B5' }}
+          onClick={() => setColor('#CFC3B5')}
+        >
+          고동색
+        </button>
+        <button
+          style={{ color: '#FDC4F8' }}
+          onClick={() => setColor('#FDC4F8')}
+        >
+          핑크색
+        </button>
+      </div>
     </div>
   );
 };
