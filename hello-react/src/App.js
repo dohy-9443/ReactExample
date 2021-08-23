@@ -1,5 +1,6 @@
 import React from 'react';
 import MyComponent from './MyComponent';
+import Counter from './Counter';
 
 const App = () => {
   return (
@@ -8,6 +9,7 @@ const App = () => {
         리액트
       </MyComponent>
       <br />
+      <Counter />
     </div>
   );
 };
