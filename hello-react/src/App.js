@@ -1,20 +1,10 @@
-import React from 'react';
-import './App.css';
+import React, { Component } from 'react';
 
-const App = () => {
-  const name = 'react';
-  return (
-    <>
-      {/* 주석은 이케 씀 */}
-      <div
-        className="react" // 시작 태그를 여러 줄로 작성하면
-        // 요거도 됨
-      >
-        {name}
-      </div>
-      <input />
-    </>
-  );
-};
+class App extends Component {
+  render() {
+    const name = 'react';
+    return <div className="react">{name}</div>;
+  }
+}
 
 export default App;
