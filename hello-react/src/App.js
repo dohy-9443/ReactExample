@@ -1,8 +1,8 @@
-import React from "react";
-import "./App.css";
+import React from 'react';
+import './App.css';
 
 const App = () => {
-  const name = "react";
+  const name = 'react';
   return (
     <>
       {/* 주석은 이케 씀 */}
@@ -12,9 +12,6 @@ const App = () => {
       >
         {name}
       </div>
-      // 근데 이건 안됨ㅋㅋ <br />
-      /* 요거도 안됨ㅋㅋ */
-      <br />
       <input />
     </>
   );
