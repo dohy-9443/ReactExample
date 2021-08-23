@@ -13,6 +13,9 @@ class EventPractice extends Component {
         }}
       >
         <h1 style={{ color: 'white' }}>이벤트 연습</h1>
+        <h1 style={{ color: 'white' }}>
+          {this.state.message || '내용을 입력해보세요.'}
+        </h1>
 
         <br />
         <input
@@ -33,6 +36,19 @@ class EventPractice extends Component {
             });
           }}
         />
+        <br />
+        <br />
+        <button
+          style={{ padding: '1rem 2rem' }}
+          onClick={() => {
+            alert(this.state.message);
+            this.setState({
+              message: '',
+            });
+          }}
+        >
+          확인
+        </button>
       </div>
     );
   }
