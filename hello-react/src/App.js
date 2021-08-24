@@ -4,6 +4,7 @@ import Counter from './Counter';
 import Say from './Say';
 import EventPractice from './EventPractice';
 import ValidationSample from './ValidationSample';
+import ScrollBox from './ScrollBox';
 
 class App extends Component {
   render() {
@@ -20,6 +21,8 @@ class App extends Component {
         <EventPractice />
         <br />
         <ValidationSample />
+        <br />
+        <ScrollBox />
       </div>
     );
   }
