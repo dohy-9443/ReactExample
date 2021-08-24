@@ -22,7 +22,18 @@ class App extends Component {
         <br />
         <ValidationSample />
         <br />
-        <ScrollBox />
+        <div
+          style={{
+            border: '5px solid #C9BA9B',
+            background: '#BDC2BB',
+            padding: '2rem',
+          }}
+        >
+          <ScrollBox ref={(ref) => (this.scrollBox = ref)} />
+          <button onClick={() => this.scrollBox.scrollToBottom()}>
+            맨 밑으로
+          </button>
+        </div>
       </div>
     );
   }

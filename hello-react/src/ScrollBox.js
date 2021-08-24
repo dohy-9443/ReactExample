@@ -24,13 +24,7 @@ class ScrollBox extends Component {
     };
 
     return (
-      <div
-        style={{
-          border: '5px solid #C9BA9B',
-          background: '#BDC2BB',
-          padding: '2rem',
-        }}
-      >
+      <div>
         <div
           style={style}
           ref={(ref) => {
