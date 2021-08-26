@@ -20,9 +20,17 @@ const IterationSample = () => {
     setNames(nextNames);
     setInputText('');
   };
+  const onRemove = (id) => {
+    const nextNames = names.filter((name) => name.id !== id);
+    setNames(nextNames);
+  };
 
   const nameList = names.map((name, index) => (
-    <li key={index} style={{ color: 'white', fontSize: '1rem' }}>
+    <li
+      key={index}
+      onDoubleClick={() => onRemove(name.id)}
+      style={{ color: 'white', fontSize: '1rem' }}
+    >
       {name.text}
     </li>
   ));
