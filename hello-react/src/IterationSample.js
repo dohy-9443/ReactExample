@@ -2,8 +2,10 @@ import React from 'react';
 
 const IterationSample = () => {
   const names = ['눈사람', '얼음', '눈', '바람'];
-  const nameList = names.map((name) => (
-    <li style={{ color: 'white', fontSize: '1rem' }}>{name}</li>
+  const nameList = names.map((name, index) => (
+    <li key={index} style={{ color: 'white', fontSize: '1rem' }}>
+      {name}
+    </li>
   ));
   return (
     <div
