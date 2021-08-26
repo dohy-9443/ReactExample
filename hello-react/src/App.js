@@ -5,6 +5,7 @@ import Say from './Say';
 import EventPractice from './EventPractice';
 import ValidationSample from './ValidationSample';
 import ScrollBox from './ScrollBox';
+import IterationSample from './IterationSample';
 
 class App extends Component {
   render() {
@@ -34,6 +35,8 @@ class App extends Component {
             맨 밑으로
           </button>
         </div>
+        <br />
+        <IterationSample />
       </div>
     );
   }
