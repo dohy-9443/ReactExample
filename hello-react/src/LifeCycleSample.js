@@ -66,14 +66,7 @@ class LifeCycleSample extends Component {
     };
 
     return (
-      <div
-        style={{
-          border: '5px solid #d18063',
-          background: '#f9d9ca',
-          padding: '2rem',
-          textAlign: 'center',
-        }}
-      >
+      <div>
         <h1 style={style} ref={(ref) => (this.myRef = ref)}>
           {this.state.number}
         </h1>
