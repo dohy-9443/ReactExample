@@ -7,6 +7,19 @@ const Box = styled.div`
   display: flx;
 `;
 
+const Button = styled.button`
+  background: white;
+  color: black;
+  border-radius: 4px;
+  padding: 0.5rem;
+  display: flex;
+  align-items: center;
+  justifty-content: center;
+  box-sizing: border-box;
+  font-size: 1rem;
+  font-weight: 600;
+`;
+
 const StyledComponent = () => {
   return <div></div>;
 };
