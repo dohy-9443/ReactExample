@@ -28,7 +28,6 @@ container.addEventListener("click", (e) => {
   if (i === keyCount) {
     setTimeout(() => {
       container.removeChild(fire);
-      console.log(i, keyCount);
     }, 5000);
   }
 });

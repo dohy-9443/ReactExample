@@ -31,7 +31,7 @@
     transform: translate(-50%, -50%) scale(0.1);
     opacity: 1;
   }
-  90% {
+  50% {
     opacity: 1;
   }
   100% {
