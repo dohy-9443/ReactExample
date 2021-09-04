@@ -8,13 +8,13 @@
   box-sizing: border-box;
   top: 0;
   left: 0;
+  background: #000;
 }
 
 #fire-box {
   position: absolute;
   width: 50px;
   height: 50px;
-  background-color: aqua;
   border-radius: 50%;
   display: none;
 }
@@ -24,6 +24,94 @@
   transform: translate(-50%, -50%) scale(0.1);
   opacity: 1;
   animation: boom 5s forwards;
+}
+
+#fire-box .fire1 {
+  position: absolute;
+  bottom: 30%;
+  right: 20%;
+  transform: translateX(-50%);
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  animation: fire1 3s 1s forwards;
+}
+
+#fire-box .fire2 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateY(-50%);
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  animation: fire2 3s 1s forwards;
+}
+
+#fire-box .fire3 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  animation: fire3 3s 1s forwards;
+}
+
+#fire-box .fire4 {
+  position: absolute;
+  bottom: 50%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  animation: fire4 3s 1s forwards;
+}
+
+#fire-box .fire5 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  animation: fire5 3s 1s forwards;
+}
+
+#fire-box .fire6 {
+  position: absolute;
+  bottom: 30%;
+  left: 20%;
+  transform: translateX(-50%);
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  animation: fire6 3s 1s forwards;
+}
+
+#fire-box .fire7 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateY(-50%);
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  animation: fire7 3s 1s forwards;
+}
+
+#fire-box .fire8 {
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  transform: translateY(-50%);
+  width: 17px;
+  height: 17px;
+  border-radius: 50%;
+  animation: fire8 3s 1s forwards;
 }
 
 @keyframes boom {
@@ -37,5 +125,85 @@
   100% {
     transform: translate(-50%, -50%) scale(1);
     opacity: 0;
+  }
+}
+
+@keyframes fire1 {
+  0% {
+    bottom: 30%;
+    right: 20%;
+  }
+  100% {
+    bottom: 100%;
+    right: 100%;
+  }
+}
+
+@keyframes fire2 {
+  0% {
+    top: 50%;
+    left: 50%;
+  }
+  100% {
+    top: 130%;
+    left: 120%;
+  }
+}
+
+@keyframes fire3 {
+  0% {
+    top: 50%;
+  }
+  100% {
+    top: 150%;
+  }
+}
+
+@keyframes fire4 {
+  0% {
+    bottom: 50%;
+  }
+  100% {
+    bottom: 150%;
+  }
+}
+
+@keyframes fire5 {
+  0% {
+    top: 50%;
+    left: 50%;
+  }
+  100% {
+    top: 100%;
+    left: -30%;
+  }
+}
+
+@keyframes fire6 {
+  0% {
+    bottom: 30%;
+    left: 20%;
+  }
+  100% {
+    bottom: 100%;
+    left: 130%;
+  }
+}
+
+@keyframes fire7 {
+  0% {
+    left: 50%;
+  }
+  100% {
+    left: 130%;
+  }
+}
+
+@keyframes fire8 {
+  0% {
+    right: 50%;
+  }
+  100% {
+    right: 130%;
   }
 }
