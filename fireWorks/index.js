@@ -17,6 +17,14 @@ container.addEventListener("click", (e) => {
   keyCount += 1;
   i += 1;
 
+  fire.setAttribute("data-key", key);
+  container.appendChild(fire);
+
+  fire.style.left = e.offsetX + "px";
+  fire.style.top = e.offsetY + "px";
+  fire.style.background = color;
+  fire.style.zIndex = i;
+
   const childFire1 = document.createElement("div");
   childFire1.classList.add("fire1");
   const childFire2 = document.createElement("div");
@@ -34,9 +42,6 @@ container.addEventListener("click", (e) => {
   const childFire8 = document.createElement("div");
   childFire8.classList.add("fire8");
 
-  fire.setAttribute("data-key", key);
-  container.appendChild(fire);
-
   fire.appendChild(childFire1);
   fire.appendChild(childFire2);
   fire.appendChild(childFire3);
@@ -45,11 +50,6 @@ container.addEventListener("click", (e) => {
   fire.appendChild(childFire6);
   fire.appendChild(childFire7);
   fire.appendChild(childFire8);
-
-  fire.style.left = e.offsetX + "px";
-  fire.style.top = e.offsetY + "px";
-  fire.style.background = color;
-  fire.style.zIndex = i;
 
   childFire1.style.background = color;
   childFire2.style.background = color;
@@ -62,6 +62,10 @@ container.addEventListener("click", (e) => {
 
   // console.log(fire.style.left, fire.style.top);
   fire.classList.add("display");
+
+  fire.addEventListener("click", (i) => {
+    i.preventDefault();
+  });
 
   if (i === keyCount) {
     setTimeout(() => {
