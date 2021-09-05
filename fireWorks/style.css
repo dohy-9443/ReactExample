@@ -4,11 +4,18 @@
   width: 100%;
   height: 100%;
   position: fixed;
-  border: 10px solid red;
   box-sizing: border-box;
   top: 0;
   left: 0;
-  background: #000;
+  background: url("./bg.png") no-repeat center / cover;
+}
+
+#bg {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 #fire-box {
@@ -23,7 +30,7 @@
   display: block;
   transform: translate(-50%, -50%) scale(0.1);
   opacity: 1;
-  animation: boom 5s forwards;
+  animation: boom 3s forwards;
 }
 
 #fire-box .fire1 {
@@ -34,7 +41,7 @@
   width: 25px;
   height: 25px;
   border-radius: 50%;
-  animation: fire1 3s 1s forwards;
+  animation: fire1 1s 0.7s forwards;
 }
 
 #fire-box .fire2 {
@@ -45,7 +52,7 @@
   width: 15px;
   height: 15px;
   border-radius: 50%;
-  animation: fire2 3s 1s forwards;
+  animation: fire2 1s 0.7s forwards;
 }
 
 #fire-box .fire3 {
@@ -56,7 +63,7 @@
   width: 30px;
   height: 30px;
   border-radius: 50%;
-  animation: fire3 3s 1s forwards;
+  animation: fire3 1s 0.7s forwards;
 }
 
 #fire-box .fire4 {
@@ -67,7 +74,7 @@
   width: 20px;
   height: 20px;
   border-radius: 50%;
-  animation: fire4 3s 1s forwards;
+  animation: fire4 1s 0.7s forwards;
 }
 
 #fire-box .fire5 {
@@ -78,7 +85,7 @@
   width: 10px;
   height: 10px;
   border-radius: 50%;
-  animation: fire5 3s 1s forwards;
+  animation: fire5 1s 0.7s forwards;
 }
 
 #fire-box .fire6 {
@@ -89,7 +96,7 @@
   width: 25px;
   height: 25px;
   border-radius: 50%;
-  animation: fire6 3s 1s forwards;
+  animation: fire6 1s 0.7s forwards;
 }
 
 #fire-box .fire7 {
@@ -100,7 +107,7 @@
   width: 22px;
   height: 22px;
   border-radius: 50%;
-  animation: fire7 3s 1s forwards;
+  animation: fire7 1s 0.7s forwards;
 }
 
 #fire-box .fire8 {
@@ -111,7 +118,7 @@
   width: 17px;
   height: 17px;
   border-radius: 50%;
-  animation: fire8 3s 1s forwards;
+  animation: fire8 1s 0.7s forwards;
 }
 
 @keyframes boom {
