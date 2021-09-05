@@ -16,6 +16,25 @@
   position: absolute;
   top: 0;
   left: 0;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+#bg.black {
+  animation: black 5s forwards;
+}
+
+@keyframes black {
+  0% {
+    background: rgba(0, 0, 0, 0.5);
+  }
+
+  50% {
+    background: rgba(0, 0, 0, 0);
+  }
+
+  100% {
+    background: rgba(0, 0, 0, 0.5);
+  }
 }
 
 #fire-box {
