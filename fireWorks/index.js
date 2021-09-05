@@ -1,7 +1,9 @@
 const container = document.querySelector("#container");
+const bg = document.querySelector("#bg");
 
 let keyCount = 0;
 let i = 0;
+let arr = [];
 
 const RandomColor = () => {
   return "#" + Math.floor(Math.random() * 16777215).toString(16);
@@ -26,49 +28,39 @@ container.addEventListener("click", (e) => {
   fire.style.zIndex = i;
 
   const childFire1 = document.createElement("div");
-  childFire1.classList.add("fire1");
+  arr.push(childFire1);
   const childFire2 = document.createElement("div");
-  childFire2.classList.add("fire2");
+  arr.push(childFire2);
   const childFire3 = document.createElement("div");
-  childFire3.classList.add("fire3");
+  arr.push(childFire3);
   const childFire4 = document.createElement("div");
-  childFire4.classList.add("fire4");
+  arr.push(childFire4);
   const childFire5 = document.createElement("div");
-  childFire5.classList.add("fire5");
+  arr.push(childFire5);
   const childFire6 = document.createElement("div");
-  childFire6.classList.add("fire6");
+  arr.push(childFire6);
   const childFire7 = document.createElement("div");
-  childFire7.classList.add("fire7");
+  arr.push(childFire7);
   const childFire8 = document.createElement("div");
-  childFire8.classList.add("fire8");
+  arr.push(childFire8);
 
-  fire.appendChild(childFire1);
-  fire.appendChild(childFire2);
-  fire.appendChild(childFire3);
-  fire.appendChild(childFire4);
-  fire.appendChild(childFire5);
-  fire.appendChild(childFire6);
-  fire.appendChild(childFire7);
-  fire.appendChild(childFire8);
-
-  childFire1.style.background = color;
-  childFire2.style.background = color;
-  childFire3.style.background = color;
-  childFire4.style.background = color;
-  childFire5.style.background = color;
-  childFire6.style.background = color;
-  childFire7.style.background = color;
-  childFire8.style.background = color;
+  for (let a = 0; a < arr.length; a++) {
+    arr[a].classList.add(`fire${a + 1}`);
+    fire.appendChild(arr[a]);
+    arr[a].style.background = color;
+  }
 
   // console.log(fire.style.left, fire.style.top);
   fire.classList.add("display");
+  bg.classList.add("black");
 
-  fire.addEventListener("click", (i) => {
-    i.preventDefault();
-  });
+  // fire.addEventListener("click", (i) => {
+  //   i.preventDefault();
+  // });
 
   if (i === keyCount) {
     setTimeout(() => {
+      bg.classList.remove("black");
       container.removeChild(fire);
     }, 5000);
   }
